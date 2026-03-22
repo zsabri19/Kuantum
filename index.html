@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuantum — GCC Digital Trade-Enablement Platform</title>
+  <meta name="description" content="Kuantum is a GCC-focused digital trade-enablement and exhibition infrastructure platform. Launch immersive digital exhibitions, exhibitor environments, and business-matching ecosystems across the GCC.">
+  <meta property="og:title" content="Kuantum — GCC Digital Trade-Enablement Platform">
+  <meta property="og:description" content="Launch digital exhibitions, exhibitor environments, and business-matching ecosystems across the GCC.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ════════════════ NAVIGATION ════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <img src="images/kuantum-logo-new.jpg" alt="Kuantum" class="logo-img" style="height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')">
+      </a>
+
+      <div class="nav-links">
+        <a href="platform.html" class="nav-link">Platform</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="proof.html" class="nav-link">Proof</a>
+        <a href="leadership.html" class="nav-link">Leadership</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link nav-cta">
+          <span class="btn btn-primary btn-sm">Book a Demo</span>
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="platform.html" class="nav-link">Platform</a>
+    <a href="solutions.html" class="nav-link">Solutions</a>
+    <a href="proof.html" class="nav-link">Proof</a>
+    <a href="leadership.html" class="nav-link">Leadership</a>
+    <a href="insights.html" class="nav-link">Insights</a>
+    <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+  </div>
+
+  <!-- ════════════════ HERO ════════════════ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-text">
+            <div class="section-tag fade-up">GCC Digital Trade Infrastructure</div>
+            <h1 class="hero-headline fade-up stagger-1">
+              Where GCC Ecosystems<br>
+              Run Their <em>Exhibitions.</em>
+            </h1>
+            <p class="hero-sub fade-up stagger-2">
+              Kuantum is a digital trade-enablement platform built to help organizers, chambers, trade bodies, and growth-focused enterprises launch immersive digital exhibitions, exhibitor environments, and business-matching ecosystems across the GCC.
+            </p>
+            <div class="hero-cta-group fade-up stagger-3">
+              <a href="contact.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-calendar-alt"></i> Book a Demo
+              </a>
+              <a href="platform.html" class="btn btn-ghost btn-lg">
+                Explore the Platform <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="hero-trust fade-up stagger-4">
+              <div class="trust-dots">
+                <div class="trust-dot"></div>
+                <div class="trust-dot"></div>
+                <div class="trust-dot"></div>
+              </div>
+              <p class="hero-trust-text">
+                <strong style="color:rgba(255,255,255,0.75); display:block;">Born from the CxO Global Forum ecosystem</strong>
+                1,200+ C-level members · 13+ countries · Presidential-level engagement
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-visual fade-in stagger-2">
+            <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+              <div class="hero-image-wrapper" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg), 0 0 0 1px var(--border);">
+                <!-- Hero video — platform showcase -->
+                <video autoplay muted loop playsinline webkit-playsinline
+                  style="width:100%;height:100%;object-fit:contain;display:block;background:linear-gradient(135deg,#0F1A30,#1A2340);"
+                  id="heroVisualVideo"
+                >
+                  <source src="Kuantum_GCC_Expansion_Strategy.pptx (1).mp4" type="video/mp4">
+                </video>
+                <!-- Sound Toggle Button -->
+                <button class="video-sound-toggle" id="soundToggle" aria-label="Toggle sound" style="position:absolute;bottom:1rem;right:1rem;z-index:10;background:rgba(26,35,64,0.85);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.8rem;cursor:pointer;transition:all 0.2s;">
+                  <i class="fas fa-volume-mute" id="soundIcon" style="color:var(--gold);font-size:1rem;"></i>
+                </button>
+                <!-- Fallback if video unavailable -->
+                <img
+                  id="heroVisualFallback"
+                  src="https://i.ytimg.com/vi/lsjeVNSeosA/maxresdefault.jpg"
+                  alt="Kuantum GCC Expansion Strategy"
+                  style="display:none;"
+                  onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#1A2740,#0F1525)'"
+                >
+                <div class="hero-image-overlay"></div>
+                <div class="hero-image-caption">
+                  <div class="caption-dot"></div>
+                  <div class="caption-text">
+                    <strong>Kuantum GCC Expansion Strategy</strong>
+                    Strategic vision for digital trade across the GCC
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;">
+                  <div class="float-icon" style="color:var(--gold);font-size:1.3rem;"><i class="fas fa-chart-line"></i></div>
+                  <div>
+                    <div class="float-stat">14,567+</div>
+                    <div class="float-label">Visitors — 2022 Event</div>
+                  </div>
+                </div>
+
+                <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;">
+                  <div class="float-icon" style="color:var(--teal-light);font-size:1.3rem;"><i class="fas fa-globe"></i></div>
+                  <div>
+                    <div class="float-stat">13+</div>
+                    <div class="float-label">Countries Reached</div>
+                  </div>
+                </div>
+
+                <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;">
+                  <div class="float-icon" style="color:var(--gold);font-size:1.3rem;"><i class="fas fa-handshake"></i></div>
+                  <div>
+                    <div class="float-stat">150+</div>
+                    <div class="float-label">Exhibitors</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ PROOF STRIP ════════════════ -->
+  <div class="proof-strip-section">
+    <div class="container">
+      <div class="proof-strip-grid">
+        <div class="proof-stat fade-up">
+          <div class="proof-num">14,567<span style="font-size:0.6em;color:var(--gold)">+</span></div>
+          <div class="proof-desc">Visitors</div>
+          <div class="proof-source">2022 Event Verified</div>
+        </div>
+        <div class="proof-stat fade-up stagger-1">
+          <div class="proof-num">150<span style="font-size:0.6em;color:var(--gold)">+</span></div>
+          <div class="proof-desc">Exhibitors</div>
+          <div class="proof-source">2022 Event Verified</div>
+        </div>
+        <div class="proof-stat fade-up stagger-2">
+          <div class="proof-num">50<span style="font-size:0.6em;color:var(--gold)">+</span></div>
+          <div class="proof-desc">Partners</div>
+          <div class="proof-source">2022 Event Verified</div>
+        </div>
+        <div class="proof-stat fade-up stagger-3">
+          <div class="proof-num">5<span style="font-size:0.6em;color:var(--gold)">+</span></div>
+          <div class="proof-desc">GCC Markets</div>
+          <div class="proof-source">Active Reach</div>
+        </div>
+        <div class="proof-stat fade-up stagger-4">
+          <div class="proof-num">1,200<span style="font-size:0.6em;color:var(--gold)">+</span></div>
+          <div class="proof-desc">CxO Forum Members</div>
+          <div class="proof-source">Founding Ecosystem</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════ BRAND VIDEO SHOWCASE ════════════════ -->
+  <section class="brand-video-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="video-grid">
+
+        <div class="fade-in">
+          <!-- Primary Hero Video -->
+          <div class="video-primary-wrapper" id="primaryVideoWrapper" style="min-height:340px;">
+            <div class="video-badge">
+              <div class="video-badge-dot"></div>
+              Kuantum Platform — Live
+            </div>
+
+            <!-- Video: try local path first, fallback to YouTube poster click -->
+            <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline
+              style="min-height:300px;background:var(--navy-mid);">
+              <source src="kuantum_intro.mp4" type="video/mp4">
+            </video>
+
+            <!-- Fallback overlay shown when video fails -->
+            <div id="videoFallback" style="display:none;position:absolute;inset:0;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=lsjeVNSeosA','_blank')">
+              <img src="https://i.ytimg.com/vi/lsjeVNSeosA/maxresdefault.jpg" alt="Kuantum 2022 Event" style="width:100%;height:100%;object-fit:cover;opacity:0.5;">
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,15,30,0.4);">
+                <div style="width:72px;height:72px;border-radius:50%;background:rgba(201,168,76,0.9);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(201,168,76,0.4);margin-bottom:1rem;"><i class="fas fa-play" style="color:var(--navy);font-size:1.6rem;margin-left:4px;"></i></div>
+                <div style="font-size:0.875rem;color:rgba(255,255,255,0.9);font-weight:600;">Watch 2022 Exhibition Highlights</div>
+                <div style="font-size:0.72rem;color:rgba(255,255,255,0.55);margin-top:0.35rem;">5 Days · 14,567 Visitors · 150+ Exhibitors</div>
+              </div>
+            </div>
+
+            <div class="video-badge" style="top:auto;bottom:1rem;left:1rem;right:auto;border-radius:var(--radius-sm);">
+              <i class="fas fa-play-circle" style="color:var(--gold);"></i>
+              <span>Platform in Action</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-content fade-up stagger-1">
+          <div class="section-tag section-tag-dark">Platform Showcase</div>
+          <h2 class="display-2 mt-3">See Kuantum<br>in motion.</h2>
+          <div class="divider-gold mt-3 mb-4"></div>
+          <p>Experience the full digital exhibition environment that Kuantum delivers — branded exhibitor booths, live networking infrastructure, and the operational layer that has powered real exhibitions across the GCC.</p>
+          <p>These aren't mockups. This is the live platform — the same environment used in the 2022 Kuantum Digital Exhibition that hosted 14,567+ visitors and 150+ exhibitors across 5 days.</p>
+
+          <div class="mt-5">
+            <a href="contact.html" class="btn btn-primary">
+              <i class="fas fa-calendar-alt"></i> Schedule a Platform Demo
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ WHY KUANTUM ════════════════ -->
+  <section class="pillars-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag fade-up">The Kuantum Difference</div>
+        <h2 class="display-2 fade-up stagger-1">Not a webinar.<br>Not a microsite.<br>A digital trade infrastructure.</h2>
+        <div class="divider-gold divider-gold-center fade-up stagger-2"></div>
+        <p class="lead fade-up stagger-3">Three distinctions that separate Kuantum from every generic virtual event tool in the market.</p>
+      </div>
+
+      <div class="grid grid-3 fade-up">
+        <div class="pillar-card">
+          <div class="fa-icon-box"><i class="fas fa-building-columns"></i></div>
+          <div class="pillar-number">01</div>
+          <h3 class="pillar-title">Exhibition Infrastructure — Not Event Software</h3>
+          <p class="pillar-body">Kuantum delivers a full digital exhibition environment — branded booths, exhibitor profiles, product showcases, live networking, and lead-capture dashboards. Built for permanence, not one-day events.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="fa-icon-box"><i class="fas fa-mosque"></i></div>
+          <div class="pillar-number">02</div>
+          <h3 class="pillar-title">Built for GCC Market Access</h3>
+          <p class="pillar-body">From organizers expanding regional reach to exhibitors entering Saudi, UAE, Oman, and Bahrain markets — Kuantum is architected for GCC ecosystem logic, not generic global deployment.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="fa-icon-box"><i class="fas fa-handshake"></i></div>
+          <div class="pillar-number">03</div>
+          <h3 class="pillar-title">Business Matching, Not Just Visibility</h3>
+          <p class="pillar-body">Kuantum enables real business engagement — partner discovery, qualified exhibitor interactions, and lead generation with data-backed visibility. Presence that converts, not just presence that broadcasts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ PLATFORM OVERVIEW ════════════════ -->
+  <section class="platform-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag section-tag-dark fade-up">The Platform</div>
+        <h2 class="display-2 text-white fade-up stagger-1">Every tool an exhibitor,<br>organizer, and partner ecosystem needs.</h2>
+        <div class="divider-gold divider-gold-center fade-up stagger-2"></div>
+        <p class="lead fade-up stagger-3" style="color:rgba(255,255,255,0.65)">Kuantum powers the full digital exhibition lifecycle — from exhibitor onboarding to live event delivery to post-exhibition lead management.</p>
+      </div>
+
+      <div class="platform-grid fade-up">
+        <div class="platform-feature">
+          <i class="fas fa-store fa-icon-box-platform"></i>
+          <h4 class="platform-title">Digital Exhibition Booths</h4>
+          <p class="platform-body">Fully branded, customizable exhibitor environments with product display, company profiles, and dedicated shareable URLs per exhibitor.</p>
+        </div>
+        <div class="platform-feature">
+          <i class="fas fa-users-rectangle fa-icon-box-platform"></i>
+          <h4 class="platform-title">Networking & Live Engagement</h4>
+          <p class="platform-body">Built-in live chat, scheduled meetings, and digital networking infrastructure that replicates the commercial intent of in-person events.</p>
+        </div>
+        <div class="platform-feature">
+          <i class="fas fa-chart-bar fa-icon-box-platform"></i>
+          <h4 class="platform-title">Lead Generation Dashboard</h4>
+          <p class="platform-body">Real-time visibility dashboards for exhibitors to capture, qualify, and follow up on leads generated during the exhibition lifecycle.</p>
+        </div>
+        <div class="platform-feature">
+          <i class="fas fa-sliders fa-icon-box-platform"></i>
+          <h4 class="platform-title">Organizer Control Layer</h4>
+          <p class="platform-body">Full event management infrastructure for organizers — floor plans, exhibitor management, sponsor placement, and engagement analytics.</p>
+        </div>
+        <div class="platform-feature">
+          <i class="fas fa-microchip fa-icon-box-platform"></i>
+          <h4 class="platform-title">AI-Assisted Matchmaking</h4>
+          <p class="platform-body">Intelligent business matching connecting exhibitors with relevant attendees, buyers, and potential partners based on profile and intent signals.</p>
+        </div>
+        <div class="platform-feature">
+          <i class="fas fa-link fa-icon-box-platform"></i>
+          <h4 class="platform-title">Always-On Exhibition URLs</h4>
+          <p class="platform-body">Kuantum exhibitions don't close. Each exhibitor profile remains accessible post-event — a permanent digital presence, not a 3-day show.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 fade-up">
+        <a href="platform.html" class="btn btn-outline btn-lg">
+          See Full Platform Capabilities <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ WHO IT'S FOR ════════════════ -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag fade-up">Solutions</div>
+        <h2 class="display-2 fade-up stagger-1">Designed around the<br>people who need it most.</h2>
+        <div class="divider-gold divider-gold-center fade-up stagger-2"></div>
+      </div>
+
+      <div class="grid grid-2 fade-up" style="gap:1.5rem;">
+        <div class="audience-card">
+          <div class="audience-header">
+            <div class="audience-icon"><i class="fas fa-building" style="font-size:1.75rem;color:var(--gold);"></i></div>
+            <div class="audience-label">For Trade Organizers</div>
+            <h3 class="audience-title">Run world-class digital exhibitions</h3>
+          </div>
+          <div class="audience-body">
+            <p class="audience-text">Full organizer control, exhibitor management, sponsor integration, and real-time analytics — without the logistical and cost constraints of physical events.</p>
+            <div class="audience-benefits">
+              <div class="benefit-item">Complete organizer control panel</div>
+              <div class="benefit-item">Sponsor tier management</div>
+              <div class="benefit-item">Real-time attendee analytics</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-header">
+            <div class="audience-icon"><i class="fas fa-globe" style="font-size:1.75rem;color:var(--gold);"></i></div>
+            <div class="audience-label">For Chambers & Associations</div>
+            <h3 class="audience-title">Extend member reach across the GCC</h3>
+          </div>
+          <div class="audience-body">
+            <p class="audience-text">Give your membership a scalable, branded exhibition presence with cross-border visibility across GCC markets without venue or travel overhead.</p>
+            <div class="audience-benefits">
+              <div class="benefit-item">Branded multi-exhibitor environments</div>
+              <div class="benefit-item">Cross-border market visibility</div>
+              <div class="benefit-item">Member engagement tools</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-header">
+            <div class="audience-icon"><i class="fas fa-landmark" style="font-size:1.75rem;color:var(--gold);"></i></div>
+            <div class="audience-label">For Government & Public Sector</div>
+            <h3 class="audience-title">Digital-first trade infrastructure</h3>
+          </div>
+          <div class="audience-body">
+            <p class="audience-text">Support digital trade infrastructure, market-access programs, and national exhibition mandates with a platform that matches institutional standards and scalability requirements.</p>
+            <div class="audience-benefits">
+              <div class="benefit-item">Institutional governance standards</div>
+              <div class="benefit-item">National-scale deployment</div>
+              <div class="benefit-item">G2G and B2G frameworks</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-header">
+            <div class="audience-icon"><i class="fas fa-box-open" style="font-size:1.75rem;color:var(--gold);"></i></div>
+            <div class="audience-label">For Exhibitors Entering GCC Markets</div>
+            <h3 class="audience-title">Your digital booth. Your leads.</h3>
+          </div>
+          <div class="audience-body">
+            <p class="audience-text">Kuantum gives exhibitors a permanent digital presence, a shareable URL, and the infrastructure to generate qualified business interactions without a physical stand.</p>
+            <div class="audience-benefits">
+              <div class="benefit-item">Dedicated exhibitor URL</div>
+              <div class="benefit-item">Lead capture dashboard</div>
+              <div class="benefit-item">Always-on digital presence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 fade-up">
+        <a href="solutions.html" class="btn btn-teal btn-lg">
+          Explore All Solutions <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ EVENT PROOF ════════════════ -->
+  <section class="proof-section section">
+    <div class="container" style="position:relative;z-index:1">
+      <div class="event-proof-grid">
+
+        <div>
+          <div class="section-tag section-tag-dark fade-up">Proof</div>
+          <h2 class="display-2 text-white mt-3 fade-up stagger-1">This is not a concept.<br>It has already happened.</h2>
+          <div class="divider-gold fade-up stagger-2"></div>
+          <p class="lead fade-up stagger-3" style="color:rgba(255,255,255,0.7);margin-bottom:2.5rem;">In 2022, Kuantum delivered a live 5-day digital exhibition that proved the platform's commercial and operational readiness at scale.</p>
+
+          <div class="event-metrics fade-up stagger-3">
+            <div class="metric-card">
+              <div class="stat-number">14,567<span style="font-size:0.5em">+</span></div>
+              <div class="stat-label">Visitors</div>
+            </div>
+            <div class="metric-card">
+              <div class="stat-number">150<span style="font-size:0.5em">+</span></div>
+              <div class="stat-label">Exhibitors</div>
+            </div>
+            <div class="metric-card span-2">
+              <div class="stat-number">50<span style="font-size:0.5em">+</span></div>
+              <div class="stat-label">Partners — Government, Chamber & Corporate</div>
+            </div>
+          </div>
+
+          <p class="mt-6 fade-up stagger-4" style="font-size:0.9rem;color:rgba(255,255,255,0.55);line-height:1.7;">
+            Real exhibitors. Real visitors. Real engagement. The 2022 exhibition included government-level participation, senior institutional representatives, and multi-country exhibitor presence — delivered entirely through the Kuantum platform.
+          </p>
+
+          <div class="mt-6 fade-up stagger-5">
+            <a href="proof.html" class="btn btn-outline">
+              View Full Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="fade-in stagger-2">
+          <div class="video-preview" onclick="window.open('https://www.youtube.com/watch?v=lsjeVNSeosA','_blank')" title="Watch Kuantum 2022 Event Highlights">
+            <img
+              src="https://i.ytimg.com/vi/lsjeVNSeosA/hqdefault.jpg"
+              alt="Kuantum 2022 Event Highlights Video"
+              class="video-thumb"
+              onerror="this.style.display='none'"
+            >
+            <div class="video-overlay">
+              <div class="play-btn"><i class="fas fa-play"></i></div>
+            </div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--mid-gray);text-align:center;margin-top:0.75rem;">
+            <i class="fab fa-youtube" style="color:#FF0000;margin-right:0.3rem;"></i>
+            Watch: Kuantum 2022 — 5-Day Digital Exhibition Highlights
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ ECOSYSTEM CREDIBILITY ════════════════ -->
+  <section class="ecosystem-section section">
+    <div class="container">
+      <div class="ecosystem-grid">
+
+        <div>
+          <div class="section-tag fade-up">Ecosystem Authority</div>
+          <h2 class="display-2 mt-3 fade-up stagger-1">Built inside an institution that operates at the highest levels.</h2>
+          <div class="divider-gold fade-up stagger-2"></div>
+          <p class="lead fade-up stagger-3" style="margin-bottom:2rem;">Kuantum was born from the CxO Global Forum — a C-level executive network with institutional reach across 13+ countries and proven government-level convening authority.</p>
+
+          <div class="credential-list fade-up stagger-3">
+            <div class="credential-item">
+              <span class="cred-icon"><i class="fas fa-users" style="color:var(--gold);"></i></span>
+              <div class="cred-text"><strong>1,200+ C-level members globally</strong>Across technology, finance, industry, and government sectors</div>
+            </div>
+            <div class="credential-item">
+              <span class="cred-icon"><i class="fas fa-globe" style="color:var(--gold);"></i></span>
+              <div class="cred-text"><strong>Offices in London, Silicon Valley & Riyadh</strong>Active presence across ~13–14 countries</div>
+            </div>
+            <div class="credential-item">
+              <span class="cred-icon"><i class="fas fa-arrow-trend-up" style="color:var(--gold);"></i></span>
+              <div class="cred-text"><strong>98% member retention rate</strong>Organic growth — members join, they stay</div>
+            </div>
+            <div class="credential-item">
+              <span class="cred-icon"><i class="fas fa-trophy" style="color:var(--gold);"></i></span>
+              <div class="cred-text"><strong>4+ consecutive Global Digital Summits</strong>Multi-year sustained execution and event credibility</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="presidential-callout fade-up">
+            <p class="quote-text">
+              "The Global Digital Summit, organized by CxO Global Forum, was addressed by the President of Pakistan — Dr. Arif Alvi — on IT, ICT, and AI. The founding ecosystem behind Kuantum operates at the highest levels of institutional and government engagement."
+            </p>
+            <div class="quote-attribution">
+              <div class="quote-attr-dot" style="font-size:1rem;"><i class="fas fa-landmark"></i></div>
+              <div>
+                <div class="quote-attr-name">Global Digital Summit — CxO Global Forum</div>
+                <div class="quote-attr-title">Addressed by President Dr. Arif Alvi · Verified via CxO Global TV · 4,791+ views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 fade-up stagger-2" style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="https://new.cxoforum.global/" target="_blank" class="btn btn-outline btn-sm">
+              <i class="fas fa-external-link-alt"></i> CxO Global Forum
+            </a>
+            <a href="leadership.html" class="btn btn-teal btn-sm">
+              Meet the Founders <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ LEADERSHIP PREVIEW ════════════════ -->
+  <section class="leadership-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag fade-up">Leadership</div>
+        <h2 class="display-2 fade-up stagger-1">Vision and execution.<br>Founder-led from day one.</h2>
+        <div class="divider-gold divider-gold-center fade-up stagger-2"></div>
+        <p class="lead fade-up stagger-3">Two founders. One vision. A platform built with institutional credibility and operational discipline at its core.</p>
+      </div>
+
+      <div class="grid grid-2 fade-up" style="gap:2rem;">
+        <div class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar" style="background:none;padding:0;width:90px;height:90px;border-radius:50%;overflow:hidden;border:3px solid rgba(201,168,76,0.4);box-shadow:0 0 0 6px rgba(201,168,76,0.08);">
+              <img src="images/kanwal-profile.jpg" alt="Kanwal Masroor Badvi" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.parentElement.innerHTML='KM';this.parentElement.style.background='linear-gradient(135deg,#1A2340,#0A0F1E)';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.parentElement.style.fontSize='1.4rem';this.parentElement.style.fontWeight='700';this.parentElement.style.color='var(--gold)'">
+            </div>
+            <div class="leader-role">Founding Visionary</div>
+            <div class="leader-name">Kanwal Masroor Badvi</div>
+            <div class="leader-title">Founder & CEO — CxO Global Forum</div>
+          </div>
+          <div class="leader-body">
+            <p class="leader-bio">CEO Award Winner and Founder of CxO Global Forum — a 1,200+ member, 13-country C-level community with offices in London, Silicon Valley, and Riyadh. The institutional force behind Kuantum's founding vision, ecosystem access, and government-level credibility.</p>
+            <div class="leader-creds">
+              <div class="leader-cred-item">Founder & CEO — CxO Global Forum</div>
+              <div class="leader-cred-item">CEO Award Winner — Transform Awards</div>
+              <div class="leader-cred-item">CEO, TECH Pakistan</div>
+              <div class="leader-cred-item">Steering Committee — KPITB</div>
+              <div class="leader-cred-item">Advisory Board — Jinnah University</div>
+            </div>
+            <a href="leadership.html" class="btn btn-outline btn-sm">
+              Full Profile <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar" style="background:none;padding:0;width:90px;height:90px;border-radius:50%;overflow:hidden;border:3px solid rgba(26,122,138,0.5);box-shadow:0 0 0 6px rgba(26,122,138,0.08);">
+              <img src="images/zeeshan-profile.jpg" alt="Zeeshan Sabri" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" onerror="this.style.display='none';this.parentElement.innerHTML='ZS';this.parentElement.style.background='linear-gradient(135deg,#1A2340,#0A0F1E)';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.parentElement.style.fontSize='1.4rem';this.parentElement.style.fontWeight='700';this.parentElement.style.color='var(--teal-light)'">
+            </div>
+            <div class="leader-role">Co-Founder & Chief Execution Officer</div>
+            <div class="leader-name">Zeeshan Sabri</div>
+            <div class="leader-title">GCC Execution & Commercialization Architect</div>
+          </div>
+          <div class="leader-body">
+            <p class="leader-bio">GCC transformation architect and execution-focused operator with $80M+ portfolio track records across 6 GCC markets. Appointed to lead Kuantum's regional strategy, platform commercialization, and operational scale as Chief Execution Officer.</p>
+            <div class="leader-creds">
+              <div class="leader-cred-item">Co-Founder & CEO — Kuantum</div>
+              <div class="leader-cred-item">Founder — ClarityOS™ (Award-Winning)</div>
+              <div class="leader-cred-item">Mentor — Oman Startup Hub</div>
+              <div class="leader-cred-item">Member — CxO Global Forum</div>
+              <div class="leader-cred-item">Entrepreneurial Excellence Award — GCC</div>
+            </div>
+            <a href="leadership.html" class="btn btn-outline btn-sm">
+              Full Profile <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ INSIGHTS PREVIEW ════════════════ -->
+  <section class="insights-section section">
+    <div class="container">
+      <div class="grid grid-2" style="gap:4rem;align-items:center;margin-bottom:4rem;">
+        <div>
+          <div class="section-tag fade-up">Authority Engine</div>
+          <h2 class="display-2 fade-up stagger-1">GCC digital trade.<br>Governance. Market-entry thinking.</h2>
+          <div class="divider-gold fade-up stagger-2"></div>
+          <p class="lead fade-up stagger-3">Practical thinking about regional digital commerce, exhibition infrastructure, and ecosystem engagement. Informed by real execution, not keynote speculation.</p>
+        </div>
+        <div class="fade-up stagger-2" style="position:relative;">
+          <img src="Zeeshan Sabri CEO_Kuantum.png" alt="Zeeshan Sabri - Kuantum CEO" style="width:100%;max-width:380px;border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+          <div style="position:absolute;bottom:-1rem;left:1rem;background:var(--navy);padding:1rem 1.5rem;border-radius:var(--radius-md);border:1px solid var(--gold);">
+            <div style="font-weight:700;color:var(--white);font-size:1rem;">Zeeshan Sabri</div>
+            <div style="font-size:0.8rem;color:var(--gold);">Co-Founder & CEO, Kuantum</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3 fade-up" style="gap:1.5rem;">
+        <div class="insight-card">
+          <div class="insight-thumb">
+            <div class="insight-thumb-bg"></div>
+            <div class="insight-thumb-icon"><i class="fas fa-globe" style="font-size:3rem;position:relative;z-index:1;opacity:0.35;color:var(--gold);"></i></div>
+            <div class="insight-tag-overlay"><span class="badge badge-gold">GCC Market Entry</span></div>
+          </div>
+          <div class="insight-body">
+            <div class="insight-category">GCC Market Entry</div>
+            <h4 class="insight-title">Why Digital Exhibitions Are the Future of GCC Market Access</h4>
+            <p class="insight-excerpt">The GCC trade landscape is shifting. Physical exhibitions have ceiling limitations — cost, geography, scale. Digital exhibition infrastructure removes all three.</p>
+            <div class="insight-meta">
+              <span class="insight-author">Zeeshan Sabri</span>
+              <a href="insights.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-thumb">
+            <div class="insight-thumb-bg" style="background:linear-gradient(135deg,#0F1A30,#1A7A8A33)"></div>
+            <div class="insight-thumb-icon"><i class="fas fa-landmark" style="font-size:3rem;position:relative;z-index:1;opacity:0.35;color:var(--teal-light);"></i></div>
+            <div class="insight-tag-overlay"><span class="badge badge-teal">Governance & Trade</span></div>
+          </div>
+          <div class="insight-body">
+            <div class="insight-category">Governance & Trade</div>
+            <h4 class="insight-title">What Chambers and Trade Bodies Need to Know About Digital Visibility</h4>
+            <p class="insight-excerpt">Most chambers still treat digital exhibitions as a backup option. The ones winning market access see it as primary infrastructure — not an alternative to physical events.</p>
+            <div class="insight-meta">
+              <span class="insight-author">Zeeshan Sabri</span>
+              <a href="insights.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-thumb">
+            <div class="insight-thumb-bg" style="background:linear-gradient(135deg,#1A2340,#C9A84C1A)"></div>
+            <div class="insight-thumb-icon"><i class="fas fa-handshake" style="font-size:3rem;position:relative;z-index:1;opacity:0.35;color:var(--gold);"></i></div>
+            <div class="insight-tag-overlay"><span class="badge badge-gold">Ecosystem Building</span></div>
+          </div>
+          <div class="insight-body">
+            <div class="insight-category">Ecosystem Building</div>
+            <h4 class="insight-title">Building Exhibition Ecosystems That Go Beyond the Event Day</h4>
+            <p class="insight-excerpt">The most valuable thing about a digital exhibition platform isn't what happens during the event — it's what happens after. Permanent exhibitor pages. Ongoing lead discovery. Always-on presence.</p>
+            <div class="insight-meta">
+              <span class="insight-author">Kanwal Masroor Badvi</span>
+              <a href="insights.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 fade-up">
+        <a href="insights.html" class="btn btn-outline btn-lg">
+          Explore All Insights <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FINAL CTA ════════════════ -->
+  <section class="final-cta section-lg">
+    <div class="container">
+      <div class="final-cta-inner">
+        <div class="section-tag section-tag-dark fade-up" style="margin-bottom:1.5rem;">Ready to Launch?</div>
+        <h2 class="final-cta-headline fade-up stagger-1">Ready to launch your next<br>digital exhibition?</h2>
+        <p class="final-cta-sub fade-up stagger-2">Book a demo, explore a partnership, or start a conversation about bringing Kuantum's digital exhibition infrastructure to your next event.</p>
+
+        <div class="cta-options fade-up stagger-3">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-calendar-alt"></i> Book a Demo
+          </a>
+          <a href="contact.html?type=partner" class="btn btn-ghost btn-lg">
+            <i class="fas fa-handshake"></i> Partner With Kuantum
+          </a>
+          <a href="contact.html?type=general" class="btn btn-ghost btn-lg">
+            <i class="fas fa-envelope"></i> Contact the Team
+          </a>
+        </div>
+
+        <div style="margin-top:2rem;" class="fade-up stagger-4">
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.3);">Part of the CxO Global Forum ecosystem · GCC-focused · Platform-ready</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/kuantum-logo-new.jpg" alt="Kuantum" class="logo-img" style="height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')">
+          </a>
+          <p>GCC Digital Trade-Enablement Platform. Immersive exhibitions, exhibitor environments, and business-matching ecosystems across the GCC.</p>
+          <div class="mt-4" style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="badge badge-gold">GCC-Focused</span>
+            <span class="badge badge-teal">Platform-Ready</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="platform.html">Features</a></li>
+            <li><a href="platform.html#booths">Digital Booths</a></li>
+            <li><a href="platform.html#networking">Networking</a></li>
+            <li><a href="platform.html#leads">Lead Dashboard</a></li>
+            <li><a href="platform.html#organizer">Organizer Tools</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#organizers">Trade Organizers</a></li>
+            <li><a href="solutions.html#chambers">Chambers & Associations</a></li>
+            <li><a href="solutions.html#government">Government</a></li>
+            <li><a href="solutions.html#exhibitors">Exhibitors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="proof.html">Proof & Case Study</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Book a Demo</a></li>
+            <li><a href="https://new.cxoforum.global/" target="_blank">CxO Global Forum</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2025 Kuantum · Part of the <a href="https://new.cxoforum.global/" target="_blank">CxO Global Forum</a> Ecosystem
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/zeeshan-sabri-75760a26" target="_blank" class="social-btn" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com/@CxOGlobalTV" target="_blank" class="social-btn" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="contact.html" class="social-btn" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

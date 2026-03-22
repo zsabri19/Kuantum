@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Book a Demo | Kuantum</title>
+  <meta name="description" content="Book a demo with Kuantum, discuss a partnership, or inquire about exhibiting at our next GCC digital exhibition. Get in touch with the founding team.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    .contact-option {
+      background: var(--white);
+      border: 2px solid var(--light-gray);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+    .contact-option:hover, .contact-option.selected {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-gold);
+      transform: translateY(-4px);
+    }
+    .contact-option .opt-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .contact-option .opt-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .contact-option .opt-desc { font-size: 0.85rem; color: var(--text-body); line-height: 1.6; }
+    .contact-form-section { display: none; }
+    .contact-form-section.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo"><img src="images/kuantum-logo-new.jpg" alt="Kuantum" class="logo-img" style="height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')"></a>
+      <div class="nav-links">
+        <a href="platform.html" class="nav-link">Platform</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="proof.html" class="nav-link">Proof</a>
+        <a href="leadership.html" class="nav-link">Leadership</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link active nav-cta"><span class="btn btn-primary btn-sm">Book a Demo</span></a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="platform.html" class="nav-link">Platform</a>
+    <a href="solutions.html" class="nav-link">Solutions</a>
+    <a href="proof.html" class="nav-link">Proof</a>
+    <a href="leadership.html" class="nav-link">Leadership</a>
+    <a href="insights.html" class="nav-link">Insights</a>
+    <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="padding:140px 0 60px;">
+    <div class="page-hero-grid"></div>
+    <div class="container">
+      <div class="page-hero-inner text-center" style="max-width:680px;margin:0 auto;">
+        <div class="breadcrumb" style="justify-content:center;">
+          <a href="index.html">Home</a><span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Contact</span>
+        </div>
+        <div class="section-tag" style="margin-top:1.5rem;">Get In Touch</div>
+        <h1 class="page-headline mt-3">Let's talk about<br>your next exhibition.</h1>
+        <p class="page-sub mt-4 mx-auto">Whether you want a platform demo, a partnership conversation, or you're ready to exhibit at Kuantum 2025 — the right conversation starts here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT TYPE SELECTOR -->
+  <section class="section-sm" style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <div class="section-tag fade-up">How can we help?</div>
+        <h2 class="h1 fade-up stagger-1">Choose what fits your situation.</h2>
+      </div>
+
+      <div class="grid grid-3 fade-up" style="gap:1.25rem;max-width:900px;margin:0 auto 3rem;">
+        <div class="contact-option selected" id="opt-demo" onclick="selectOption('demo')">
+          <div class="opt-icon"><i class="fas fa-calendar-days" style="font-size:2rem;color:var(--gold);"></i></div>
+          <div class="opt-title">Book a Demo</div>
+          <div class="opt-desc">See the Kuantum platform in action with a 30-minute walkthrough from the team.</div>
+        </div>
+        <div class="contact-option" id="opt-partner" onclick="selectOption('partner')">
+          <div class="opt-icon"><i class="fas fa-handshake" style="font-size:2rem;color:var(--teal);"></i></div>
+          <div class="opt-title">Partner With Kuantum</div>
+          <div class="opt-desc">Discuss chamber partnerships, government programs, or sponsor opportunities.</div>
+        </div>
+        <div class="contact-option" id="opt-exhibitor" onclick="selectOption('exhibitor')">
+          <div class="opt-icon"><i class="fas fa-store" style="font-size:2rem;color:var(--gold);"></i></div>
+          <div class="opt-title">Apply as Exhibitor</div>
+          <div class="opt-desc">Reserve your digital booth for Kuantum 2025 and access GCC markets.</div>
+        </div>
+      </div>
+
+      <!-- DEMO FORM -->
+      <div class="contact-form-section active" id="form-demo" style="max-width:680px;margin:0 auto;">
+        <div style="background:var(--white);border-radius:var(--radius-xl);padding:3rem;border:1px solid var(--light-gray);box-shadow:var(--shadow-sm);">
+          <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Book a Platform Demo</h3>
+          <p style="font-size:0.875rem;color:var(--mid-gray);margin-bottom:2.5rem;">30-minute walkthrough. No commitment. We'll show you the exhibition environment, platform capabilities, and what's relevant to your organization.</p>
+
+          <form id="demoForm" onsubmit="handleSubmit(event, 'demo')">
+            <div class="grid grid-2" style="gap:1.25rem;">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="name@organization.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Organization *</label>
+              <input type="text" class="form-input" placeholder="Your organization or company name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Role</label>
+              <select class="form-select">
+                <option value="">Select your role</option>
+                <option>Trade Organizer / Event Manager</option>
+                <option>Chamber / Association Representative</option>
+                <option>Government / Public Sector</option>
+                <option>Exhibitor / Business Development</option>
+                <option>Investor / Strategic Partner</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">GCC Market Focus</label>
+              <select class="form-select">
+                <option value="">Select primary market</option>
+                <option>Saudi Arabia</option>
+                <option>UAE</option>
+                <option>Oman</option>
+                <option>Bahrain</option>
+                <option>Qatar</option>
+                <option>Kuwait</option>
+                <option>Multiple GCC Markets</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tell us about your event or need</label>
+              <textarea class="form-textarea" placeholder="Brief description of what you're planning or what you'd like to explore with Kuantum..." style="min-height:110px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full" style="justify-content:center;padding:1.1rem 2rem;font-size:1rem;">
+              <i class="fas fa-calendar-alt"></i> Request Demo
+            </button>
+            <p style="font-size:0.75rem;color:var(--mid-gray);text-align:center;margin-top:1rem;">We respond within 24 hours. No sales pressure — just a platform walkthrough.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- PARTNER FORM -->
+      <div class="contact-form-section" id="form-partner" style="max-width:680px;margin:0 auto;">
+        <div style="background:var(--white);border-radius:var(--radius-xl);padding:3rem;border:1px solid var(--light-gray);box-shadow:var(--shadow-sm);">
+          <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Partner With Kuantum</h3>
+          <p style="font-size:0.875rem;color:var(--mid-gray);margin-bottom:2.5rem;">Chambers, associations, government bodies, sponsors — tell us about your organization and partnership interests.</p>
+          <form id="partnerForm" onsubmit="handleSubmit(event, 'partner')">
+            <div class="grid grid-2" style="gap:1.25rem;">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="name@organization.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Organization *</label>
+              <input type="text" class="form-input" placeholder="Chamber, association, or company name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Partnership Type</label>
+              <select class="form-select">
+                <option value="">Select partnership type</option>
+                <option>Chamber / Association Partnership</option>
+                <option>Government / Public Sector Program</option>
+                <option>Corporate Sponsorship</option>
+                <option>Media & Content Partner</option>
+                <option>Technology Integration</option>
+                <option>Strategic Advisory</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Partnership Interests & Goals</label>
+              <textarea class="form-textarea" placeholder="Describe your partnership interests, organization mandate, and what you'd like to achieve through Kuantum..." style="min-height:130px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-teal w-full" style="justify-content:center;padding:1.1rem 2rem;font-size:1rem;">
+              <i class="fas fa-handshake"></i> Submit Partnership Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- EXHIBITOR FORM -->
+      <div class="contact-form-section" id="form-exhibitor" style="max-width:680px;margin:0 auto;">
+        <div style="background:var(--white);border-radius:var(--radius-xl);padding:3rem;border:1px solid var(--light-gray);box-shadow:var(--shadow-sm);">
+          <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Apply as an Exhibitor</h3>
+          <p style="font-size:0.875rem;color:var(--mid-gray);margin-bottom:2.5rem;">Reserve your digital booth for Kuantum 2025 and access GCC markets through a branded exhibition presence and lead generation dashboard.</p>
+          <form id="exhibitorForm" onsubmit="handleSubmit(event, 'exhibitor')">
+            <div class="grid grid-2" style="gap:1.25rem;">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="name@company.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Company Name *</label>
+              <input type="text" class="form-input" placeholder="Your company name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Industry Sector</label>
+              <select class="form-select">
+                <option value="">Select your industry</option>
+                <option>Technology & Software</option>
+                <option>Financial Services & Fintech</option>
+                <option>Healthcare & Medtech</option>
+                <option>Manufacturing & Industry</option>
+                <option>Real Estate & Construction</option>
+                <option>Energy & Utilities</option>
+                <option>Retail & E-commerce</option>
+                <option>Education & Training</option>
+                <option>Professional Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Target GCC Markets</label>
+              <select class="form-select">
+                <option value="">Select target markets</option>
+                <option>Saudi Arabia (primary)</option>
+                <option>UAE (primary)</option>
+                <option>Oman (primary)</option>
+                <option>Multiple GCC Markets</option>
+                <option>All GCC Markets</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">What you're looking to achieve at Kuantum</label>
+              <textarea class="form-textarea" placeholder="Lead generation, brand visibility, B2B meetings, market entry — tell us your goals..." style="min-height:110px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full" style="justify-content:center;padding:1.1rem 2rem;font-size:1rem;">
+              <i class="fas fa-store"></i> Apply as Exhibitor
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- SUCCESS MESSAGE (hidden by default) -->
+      <div id="successMsg" style="display:none;max-width:680px;margin:0 auto;text-align:center;padding:4rem 3rem;background:var(--white);border-radius:var(--radius-xl);border:1px solid var(--light-gray);">
+        <div style="font-size:3rem;margin-bottom:1.5rem;color:#16a34a;"><i class="fas fa-circle-check"></i></div>
+        <h3 style="font-size:1.5rem;color:var(--navy);margin-bottom:1rem;">Thank you — we've received your inquiry.</h3>
+        <p style="color:var(--text-body);line-height:1.7;margin-bottom:2rem;">The Kuantum team will respond within 24 hours. In the meantime, feel free to explore the platform capabilities or read our latest insights.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="platform.html" class="btn btn-primary">Explore the Platform</a>
+          <a href="insights.html" class="btn btn-outline">Read Insights</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT CONTACT INFO -->
+  <section class="section-sm" style="background:var(--navy);">
+    <div class="container">
+      <div class="grid grid-3 fade-up" style="gap:1.5rem;max-width:900px;margin:0 auto;">
+        <div style="text-align:center;padding:2rem;background:rgba(255,255,255,0.04);border-radius:var(--radius-lg);border:1px solid var(--border);">
+          <div style="font-size:1.75rem;margin-bottom:1rem;"><i class="fas fa-envelope" style="color:var(--gold);"></i></div>
+          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Email</div>
+          <a href="mailto:zeeshan@global-mkts.com" style="font-size:0.9rem;color:rgba(255,255,255,0.8);text-decoration:none;">zeeshan@global-mkts.com</a>
+        </div>
+        <div style="text-align:center;padding:2rem;background:rgba(255,255,255,0.04);border-radius:var(--radius-lg);border:1px solid var(--border);">
+          <div style="font-size:1.75rem;margin-bottom:1rem;"><i class="fab fa-linkedin" style="color:var(--gold);"></i></div>
+          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/zeeshan-sabri-75760a26" target="_blank" style="font-size:0.9rem;color:rgba(255,255,255,0.8);text-decoration:none;">Zeeshan Sabri</a>
+        </div>
+        <div style="text-align:center;padding:2rem;background:rgba(255,255,255,0.04);border-radius:var(--radius-lg);border:1px solid var(--border);">
+          <div style="font-size:1.75rem;margin-bottom:1rem;"><i class="fas fa-globe" style="color:var(--gold);"></i></div>
+          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">CxO Global Forum</div>
+          <a href="https://new.cxoforum.global/" target="_blank" style="font-size:0.9rem;color:rgba(255,255,255,0.8);text-decoration:none;">cxoforum.global</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS -->
+  <section class="section-sm" style="background:var(--off-white);border-top:1px solid var(--light-gray);">
+    <div class="container">
+      <div style="text-align:center;max-width:700px;margin:0 auto;">
+        <p style="font-size:0.85rem;color:var(--mid-gray);line-height:1.8;">
+          Kuantum is part of the <a href="https://new.cxoforum.global/" target="_blank" style="color:var(--gold);">CxO Global Forum</a> ecosystem — a C-level executive community with 1,200+ members across 13+ countries. Platform-ready. GCC-focused. Founder-led.
+        </p>
+        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+          <a href="proof.html" style="font-size:0.8rem;color:var(--teal);display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-check-circle"></i> View Platform Proof</a>
+          <span style="color:var(--light-gray);">·</span>
+          <a href="leadership.html" style="font-size:0.8rem;color:var(--teal);display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-user-tie"></i> Meet the Founders</a>
+          <span style="color:var(--light-gray);">·</span>
+          <a href="platform.html" style="font-size:0.8rem;color:var(--teal);display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-desktop"></i> Explore Platform</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="images/kuantum-logo-new.jpg" alt="Kuantum" class="logo-img" style="height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')"></a>
+          <p>GCC Digital Trade-Enablement Platform.</p>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><ul><li><a href="platform.html">Features</a></li></ul></div>
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html">All Solutions</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="leadership.html">Leadership</a></li><li><a href="proof.html">Proof</a></li><li><a href="insights.html">Insights</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Kuantum · Part of the <a href="https://new.cxoforum.global/" target="_blank">CxO Global Forum</a> Ecosystem</div>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/zeeshan-sabri-75760a26" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@CxOGlobalTV" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Auto-detect URL param
+    const params = new URLSearchParams(window.location.search);
+    const typeParam = params.get('type');
+    if (typeParam === 'partner') selectOption('partner');
+    else if (typeParam === 'exhibitor') selectOption('exhibitor');
+
+    function selectOption(type) {
+      // Update option cards
+      document.querySelectorAll('.contact-option').forEach(o => o.classList.remove('selected'));
+      document.getElementById('opt-' + type).classList.add('selected');
+      // Show form
+      document.querySelectorAll('.contact-form-section').forEach(f => f.classList.remove('active'));
+      document.getElementById('form-' + type).classList.add('active');
+      document.getElementById('successMsg').style.display = 'none';
+    }
+
+    function handleSubmit(e, type) {
+      e.preventDefault();
+      // Hide all forms
+      document.querySelectorAll('.contact-form-section').forEach(f => f.classList.remove('active'));
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>
