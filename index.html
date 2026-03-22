@@ -19,7 +19,7 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="logo">
-        <img src="images/kuantum-logo-new.jpg" alt="Kuantum" class="logo-img" style="height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')">
+        <img src="images/kuantum-logo-cxo.png" alt="Kuantum" class="logo-img" style="filter:brightness(1.3);height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')">
       </a>
 
       <div class="nav-links">
@@ -57,7 +57,7 @@
       <div class="container">
         <div class="hero-inner">
 
-          <div class="hero-text">
+          <div class="hero-text" style="max-width:700px;">
             <div class="section-tag fade-up">GCC Digital Trade Infrastructure</div>
             <h1 class="hero-headline fade-up stagger-1">
               Where GCC Ecosystems<br>
@@ -87,66 +87,55 @@
             </div>
           </div>
 
-          <div class="hero-visual fade-in stagger-2">
-            <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
-              <div class="hero-image-wrapper" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg), 0 0 0 1px var(--border);">
-                <!-- Hero video — platform showcase -->
-                <video autoplay muted loop playsinline webkit-playsinline
-                  style="width:100%;height:100%;object-fit:contain;display:block;background:linear-gradient(135deg,#0F1A30,#1A2340);"
-                  id="heroVisualVideo"
-                >
-                  <source src="Kuantum_GCC_Expansion_Strategy.pptx (1).mp4" type="video/mp4">
-                </video>
-                <!-- Sound Toggle Button -->
-                <button class="video-sound-toggle" id="soundToggle" aria-label="Toggle sound" style="position:absolute;bottom:1rem;right:1rem;z-index:10;background:rgba(26,35,64,0.85);border:1px solid var(--border);border-radius:8px;padding:0.6rem 0.8rem;cursor:pointer;transition:all 0.2s;">
-                  <i class="fas fa-volume-mute" id="soundIcon" style="color:var(--gold);font-size:1rem;"></i>
-                </button>
-                <!-- Fallback if video unavailable -->
-                <img
-                  id="heroVisualFallback"
-                  src="https://i.ytimg.com/vi/lsjeVNSeosA/maxresdefault.jpg"
-                  alt="Kuantum GCC Expansion Strategy"
-                  style="display:none;"
-                  onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#1A2740,#0F1525)'"
-                >
-                <div class="hero-image-overlay"></div>
-                <div class="hero-image-caption">
-                  <div class="caption-dot"></div>
-                  <div class="caption-text">
-                    <strong>Kuantum GCC Expansion Strategy</strong>
-                    Strategic vision for digital trade across the GCC
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;">
-                  <div class="float-icon" style="color:var(--gold);font-size:1.3rem;"><i class="fas fa-chart-line"></i></div>
-                  <div>
-                    <div class="float-stat">14,567+</div>
-                    <div class="float-label">Visitors — 2022 Event</div>
-                  </div>
-                </div>
-
-                <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;">
-                  <div class="float-icon" style="color:var(--teal-light);font-size:1.3rem;"><i class="fas fa-globe"></i></div>
-                  <div>
-                    <div class="float-stat">13+</div>
-                    <div class="float-label">Countries Reached</div>
-                  </div>
-                </div>
-
-                <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;">
-                  <div class="float-icon" style="color:var(--gold);font-size:1.3rem;"><i class="fas fa-handshake"></i></div>
-                  <div>
-                    <div class="float-stat">150+</div>
-                    <div class="float-label">Exhibitors</div>
-                  </div>
-                </div>
-              </div>
+  <!-- ════════════════ HERO VIDEO SECTION ════════════════ -->
+  <section style="background:var(--navy);padding:4rem 0;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr;gap:2rem;max-width:900px;margin:0 auto;">
+        <!-- Video -->
+        <div class="hero-image-wrapper" style="position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg), 0 0 0 1px var(--border);">
+          <iframe
+            width="100%"
+            height="100%"
+            style="aspect-ratio:16/9;width:100%;height:100%;object-fit:contain;display:block;background:linear-gradient(135deg,#0F1A30,#1A2340);border:none;position:relative;z-index:1;"
+            src="https://www.youtube.com/embed/UbTx95-K6Aw?rel=0&modestbranding=1"
+            title="Kuantum GCC Expansion Strategy"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- Video Caption -->
+        <div style="padding:0.5rem 0;text-align:center;">
+          <div style="font-size:1rem;color:var(--text-light);font-weight:500;">Strategic vision for digital trade across the GCC</div>
+        </div>
+        <!-- Stats -->
+        <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+          <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;flex:1;min-width:140px;max-width:200px;">
+            <div class="float-icon" style="color:var(--gold);font-size:1.3rem;"><i class="fas fa-chart-line"></i></div>
+            <div>
+              <div class="float-stat">14,567+</div>
+              <div class="float-label">Visitors — 2022 Event</div>
             </div>
           </div>
-
+          <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;flex:1;min-width:140px;max-width:200px;">
+            <div class="float-icon" style="color:var(--teal-light);font-size:1.3rem;"><i class="fas fa-globe"></i></div>
+            <div>
+              <div class="float-stat">13+</div>
+              <div class="float-label">Countries Reached</div>
+            </div>
+          </div>
+          <div class="hero-float-card" style="position:relative;top:0;left:0;right:0;bottom:0;transform:none;flex:1;min-width:140px;max-width:200px;">
+            <div class="float-icon" style="color:var(--gold);font-size:1.3rem;"><i class="fas fa-handshake"></i></div>
+            <div>
+              <div class="float-stat">150+</div>
+              <div class="float-label">Exhibitors</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -198,15 +187,21 @@
               Kuantum Platform — Live
             </div>
 
-            <!-- Video: try local path first, fallback to YouTube poster click -->
-            <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline
-              style="min-height:300px;background:var(--navy-mid);">
-              <source src="kuantum_intro.mp4" type="video/mp4">
-            </video>
+            <!-- Video: YouTube Embed - Kuantum Hero -->
+            <iframe
+              width="100%"
+              height="100%"
+              style="min-height:340px;aspect-ratio:16/9;background:var(--navy-mid);border:none;"
+              src="https://www.youtube.com/embed/T212G9JJyyE?autoplay=1&mute=1&loop=1&playlist=T212G9JJyyE&rel=0&modestbranding=1&showinfo=0&controls=1"
+              title="Kuantum Hero"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
 
             <!-- Fallback overlay shown when video fails -->
-            <div id="videoFallback" style="display:none;position:absolute;inset:0;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=lsjeVNSeosA','_blank')">
-              <img src="https://i.ytimg.com/vi/lsjeVNSeosA/maxresdefault.jpg" alt="Kuantum 2022 Event" style="width:100%;height:100%;object-fit:cover;opacity:0.5;">
+            <div id="videoFallback" style="display:none;position:absolute;inset:0;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=T212G9JJyyE','_blank')">
+              <img src="https://i.ytimg.com/vi/T212G9JJyyE/maxresdefault.jpg" alt="Kuantum Hero" style="width:100%;height:100%;object-fit:cover;opacity:0.5;">
               <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,15,30,0.4);">
                 <div style="width:72px;height:72px;border-radius:50%;background:rgba(201,168,76,0.9);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(201,168,76,0.4);margin-bottom:1rem;"><i class="fas fa-play" style="color:var(--navy);font-size:1.6rem;margin-left:4px;"></i></div>
                 <div style="font-size:0.875rem;color:rgba(255,255,255,0.9);font-weight:600;">Watch 2022 Exhibition Highlights</div>
@@ -699,7 +694,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo">
-            <img src="images/kuantum-logo-new.jpg" alt="Kuantum" class="logo-img" style="height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')">
+            <img src="images/kuantum-logo-cxo.png" alt="Kuantum" class="logo-img" style="filter:brightness(1.3);height:90px;width:auto;max-width:240px;object-fit:contain;" onerror="this.classList.add('error')">
           </a>
           <p>GCC Digital Trade-Enablement Platform. Immersive exhibitions, exhibitor environments, and business-matching ecosystems across the GCC.</p>
           <div class="mt-4" style="display:flex;gap:0.5rem;flex-wrap:wrap;">
